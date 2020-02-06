@@ -30,7 +30,7 @@ public class Main {
         }
 
         System.out.println("Korisnik je uneo:" + userAge); */
-        System.out.print("Unesite broj godina.");
+ /*  System.out.print("Unesite broj godina.");
         Scanner input2 = new Scanner(System.in);
         int personAge = input2.nextInt();
 
@@ -45,7 +45,42 @@ public class Main {
         } else if (personAge >= 18) {
             System.out.println("Osoba je punoletna");
 
-        }
-    }
+        } 
+         */
+        System.out.println("*********************************");
 
+        Scanner input3 = new Scanner(System.in);
+        int dayInWeek = 0;
+        String day = null;
+
+        do {
+            System.out.println("Please enter a nummber for a day in week, between 1 do 7");
+            dayInWeek = input3.nextInt();
+        } while (dayInWeek < 0 || dayInWeek > 7);
+
+        switch (dayInWeek) {
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+            case 7:
+                day = "Sunday";
+                break;
+        }
+        System.out.println("Today is " + day);
+    }
 }
